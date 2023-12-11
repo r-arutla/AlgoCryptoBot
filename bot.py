@@ -35,10 +35,10 @@ testsecretkey = ""
     
 
 def sendEmail(emailSubject, emailContent):
-    sender = 'rohan.arutla@gmail.com'
+    sender = ''
     password = ''
 
-    receiver = 'rohan.trade.updates@gmail.com'
+    receiver = ''
 
     subject = emailSubject
     content = emailContent
@@ -64,7 +64,7 @@ client = Client(testapikey, testsecretkey, tld='us', testnet=True)
 
 
 def readEmail(symbol, i, in_position):
-    username = 'rohan.trade.inputs@gmail.com'
+    username = ''
     password = ''
     imap_server = 'imap.gmail.com'
         
@@ -81,7 +81,7 @@ def readEmail(symbol, i, in_position):
         print(sender)
         
         
-        if sender == 'rohan.arutla@gmail.com' or 'rohan.trade.updates@gmail.com':
+        if sender == '' or '':
             
             if emailSubject == "SELL":
                 subject = "SELL COMMAND EXECUTED"
