@@ -24,11 +24,11 @@ import psutil
 #for printing error message in error handling
 import traceback
 
-apikey = "lejGE6kkXCjypU9upwrLm8Rl3VuYOlT81ejes0Gwui7aZ7d6ghEe2fDR78HQYlZ8"
-secretkey = "DaNk4RYyyFFwgRbdhydTUJojFpWKNCED8AKI8lMbeHVFprG1owYLlbPrJi6oDGA0"
+apikey = ""
+secretkey = ""
 
-testapikey = "FtauFUC9ckOHsmmcsB3zUE7MidtLaH7Qn6DzznnX7b59h9GCN6ExyoNvVDBMIiAT"
-testsecretkey = "yygqsIJocGgVDSCAHs0zcAb5mVYl2lW136JbZ0aZDxaWPcCWQh45xhHWDYCsibTh"
+testapikey = ""
+testsecretkey = ""
 
 #if using testNet, do testnet=True in Client
 #client = Client(apikey, secretkey, tld='us', testnet=False)
@@ -36,7 +36,7 @@ testsecretkey = "yygqsIJocGgVDSCAHs0zcAb5mVYl2lW136JbZ0aZDxaWPcCWQh45xhHWDYCsibT
 
 def sendEmail(emailSubject, emailContent):
     sender = 'rohan.arutla@gmail.com'
-    password = 'bgil rleg prvk ckgz'
+    password = ''
 
     receiver = 'rohan.trade.updates@gmail.com'
 
@@ -65,7 +65,7 @@ client = Client(testapikey, testsecretkey, tld='us', testnet=True)
 
 def readEmail(symbol, i, in_position):
     username = 'rohan.trade.inputs@gmail.com'
-    password = 'gsbq tktb scpg umxb'
+    password = ''
     imap_server = 'imap.gmail.com'
         
     mb = MailBox(imap_server)
@@ -197,8 +197,7 @@ def sellone(Symbol, iteration):
     if orderstatus == 'FILLED':
         in_position = False
         
-        #sometimes an IndexError here, list index out of bounds only on 'order["fills"][1]'
-        #might have a similar error in buyone method
+        
         sellprice = float(order["fills"][0]["price"])
                         
         #email
